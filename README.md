@@ -1,6 +1,8 @@
 # Mem-Base 🧠🗒️
 Python script for a to-do list app that utilizes SHA3-512 and local storage via file handling
 
+![Alt text](images/Screenshot_20260830_103356_Termux.jpg)
+
 Requirements
 * Ensure the latest version of python is installed in your terminal (python 3.x)
 
