@@ -85,7 +85,7 @@ if os.path.exists("username.txt"):
             mem_list = init_mems()
             try:
                 show_mems()
-                prompt = int(input("Which memory would you like to change? (Enter the number): "))
+                prompt = int(input("Which memory would you like to alter? (Enter the number): "))
                 indx_val = prompt - 1
                 mem_list[indx_val] = input("Enter whatever you'd like to remember instead: ").strip()
                 remember(mem_list)
@@ -99,7 +99,7 @@ if os.path.exists("username.txt"):
         def nuke_all():
             os.remove("memories.txt")
             os.remove("username.txt") 
-            print(green("All your data has successfully been deleted."))
+            print(green("All your data has successfully been forgotten."))
 
         def main_menu():
             user_query = input("Would you like to return to the main menu? (yes/no): ").lower().strip()
@@ -168,9 +168,9 @@ if os.path.exists("username.txt"):
             print("=================================")
             print("Option 1: Show me all my memories")
             print("Option 2: Add a new memory")
-            print("Option 3: Remove a memory")
-            print("Option 4: Update a memory")
-            print("Option 5: Delete all memories")
+            print("Option 3: Forget a memory")
+            print("Option 4: Alter a memory")
+            print("Option 5: Forget all memories")
             print("Option 6: Exit")
             print("=================================")
             try:
@@ -199,7 +199,7 @@ if os.path.exists("username.txt"):
                     main_menu()
                 elif user_choice == 5:
                     os.system("cls" if os.name == 'nt' else 'clear')
-                    user_prompt = input("Are you sure you want to delete all your data? (yes/no): ").strip().lower()
+                    user_prompt = input("Are you sure you want to forget everything? (yes/no): ").strip().lower()
                     if user_prompt:
                         if user_prompt == "yes":
                             nuke_all()
