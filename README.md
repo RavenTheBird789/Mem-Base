@@ -21,3 +21,4 @@ Notes For Usage:
 Updates (For Version 1.1.0)
 * Unicode art featured in UI with ANSI colors
 * Additional functions added to improve UX while navigating Mem-Base
+* FileNotFound error fixed for Option 5 if no prior memories have been saved
