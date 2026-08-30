@@ -4,6 +4,21 @@ import os
 import time
 import hashlib
 
+def bold(text: str) -> str:
+    return f"\033[1m{text}\033[0m"
+
+def red(text: str) -> str:
+    return f"\033[91m{text}\033[0m"
+
+def pink(text: str) -> str:
+    return f"\033[48;2;255;105;180m{text}\033[0m"
+
+def green(text: str) -> str:
+    return f"\033[92m{text}\033[0m"
+
+def yellow(text: str) -> str:
+    return f"\033[93m{text}\033[0m"
+
 if os.path.exists("username.txt"):
     user_authentication = ""
     with open("username.txt", "r", encoding="utf-8") as u:
@@ -25,9 +40,9 @@ if os.path.exists("username.txt"):
 
     if hashed_user_authentication == user_authentication:
         time.sleep(0.5)
-        print("Access Granted")
+        print(green("Access Granted"))
         time.sleep(0.5)
-        print(f"Welcome, {username} :)")
+        print((f"Welcome, {username} ") + yellow(":)"))
         time.sleep(0.5)
         os.system("cls" if os.name == 'nt' else 'clear')
 
@@ -44,10 +59,10 @@ if os.path.exists("username.txt"):
             if prompt:
                 mem_list.append(prompt)
                 remember(mem_list)
-                print("Your memories have been updated!")
+                print(green("Your memories have been successfully updated!"))
             else:
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Input field empty.\nReturning to the main menu.")
+                print(yellow("Input field empty.\nReturning to the main menu."))
                 time.sleep(3)
                 main()
 
@@ -61,7 +76,7 @@ if os.path.exists("username.txt"):
                 remember(mem_list)
             except ValueError:
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Invalid Input")
+                print(red("Invalid Input"))
                 time.sleep(1)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 main();                
@@ -76,7 +91,7 @@ if os.path.exists("username.txt"):
                 remember(mem_list)
             except ValueError:
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Invalid Input")
+                print(red("Invalid Input"))
                 time.sleep(1)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 main();                  
@@ -84,63 +99,67 @@ if os.path.exists("username.txt"):
         def nuke_all():
             os.remove("memories.txt")
             os.remove("username.txt") 
-            print("All your data has been deleted.")
+            print(green("All your data has successfully been deleted."))
 
         def main_menu():
             user_query = input("Would you like to return to the main menu? (yes/no): ").lower().strip()
             if user_query == "yes":
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Returning to the main menu")
+                print(green("Returning to the main menu"))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Returning to the main menu" + ("." * 1))
+                print(green("Returning to the main menu" + ("." * 1)))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Returning to the main menu" + ("." * 2))
+                print(green("Returning to the main menu" + ("." * 2)))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Returning to the main menu" + ("." * 3))
+                print(green("Returning to the main menu" + ("." * 3)))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 main();
             elif user_query == "no":
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Exiting")
+                print(green("Exiting"))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Exiting" + ("." * 1))
+                print(green("Exiting" + ("." * 1)))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Exiting" + ("." * 2))
+                print(green("Exiting" + ("." * 2)))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Exiting" + ("." * 3))
+                print(green("Exiting" + ("." * 3)))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 os._exit(0);
             else:
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Invalid Input. Returning to the main menu")
+                print(red("Invalid Input. Returning to the main menu"))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Invalid Input. Returning to the main menu" + ("." * 1))
+                print(red("Invalid Input. Returning to the main menu" + ("." * 1)))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Invalid Input. Returning to the main menu" + ("." * 2))
+                print(red("Invalid Input. Returning to the main menu" + ("." * 2)))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Invalid Input. Returning to the main menu" + ("." * 3))
+                print(red("Invalid Input. Returning to the main menu" + ("." * 3)))
                 time.sleep(0.5)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 main();
  
         def trademark(main_func):
             def wrapper():
-                print("------------------")
-                print("---| Mem-Base |---")
-                print("------------------")
-                print("By RavenTheBird789")
-                print("------------------")
+                print("  ________________  ")
+                print(" /                \\")
+                print("|------------------|")
+                print(("|---| ") + bold(pink("Mem-Base")) + (" |---|"))
+                print("|------------------|")
+                print(("|") + bold(red("By RavenTheBird789")) + ("|"))
+                print("|------------------|")
+                print("|---|  v1.1.0  |---|")
+                print("|__________________|\n")
                 main_func()
             return wrapper
 
@@ -178,40 +197,56 @@ if os.path.exists("username.txt"):
                     main_menu()
                 elif user_choice == 5:
                     os.system("cls" if os.name == 'nt' else 'clear')
-                    nuke_all()
-                    time.sleep(2)
-                    main_menu();
+                    user_prompt = input("Are you sure you want to delete all your data? (yes/no): ").strip().lower()
+                    if user_prompt:
+                        if user_prompt == "yes":
+                            nuke_all()
+                            time.sleep(2)
+                            main_menu();
+                        elif user_prompt == "no":
+                            os.system("cls" if os.name == 'nt' else 'clear')
+                            main();
+                        else:
+                            os.system("cls" if os.name == 'nt' else 'clear')
+                            print(red("Invalid Input"))
+                            time.sleep(2)
+                            main();
+                    else:
+                        os.system("cls" if os.name == 'nt' else 'clear')
+                        print(yellow("Input field empty.\nReturning to the main menu."))
+                        time.sleep(3)
+                        main()
                 elif user_choice == 6:
                     os.system("cls" if os.name == 'nt' else 'clear')
-                    print("Exiting")
+                    print(green("Exiting"))
                     time.sleep(0.5)
                     os.system("cls" if os.name == 'nt' else 'clear')
-                    print("Exiting" + ("." * 1))
+                    print(green("Exiting" + ("." * 1)))
                     time.sleep(0.5)
                     os.system("cls" if os.name == 'nt' else 'clear')
-                    print("Exiting" + ("." * 2))
+                    print(green("Exiting" + ("." * 2)))
                     time.sleep(0.5)
                     os.system("cls" if os.name == 'nt' else 'clear')
-                    print("Exiting" + ("." * 3))
+                    print(green("Exiting" + ("." * 3)))
                     time.sleep(0.5)
                     os.system("cls" if os.name == 'nt' else 'clear')
                     os._exit(0);              
                 else:
                     time.sleep(1)
                     os.system("cls" if os.name == 'nt' else 'clear')
-                    print("Invalid Input")
+                    print(red("Invalid Input"))
                     time.sleep(2)
                     main();
             except ValueError:
                 time.sleep(1)
                 os.system("cls" if os.name == 'nt' else 'clear')
-                print("Invalid Input")
+                print(red("Invalid Input"))
                 time.sleep(1)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 main();
         main()
     else:
-        print("Access Denied")
+        print(red("Access Denied"))
         os._exit(0);
 
 else:
