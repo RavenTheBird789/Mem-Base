@@ -9,3 +9,15 @@ Installation
 
 Execution
 * To run, simply type "python3 mem_base.py" in your command line within your terminal or a shortcut can be created in a terminal session using the bash alias command to run the program faster. (Ex: alias run="python3 mem_base.py")
+
+Key Terminology:
+* Memories - Reminders for yourself that you write to the "memories.txt" file
+* Forgetting - The process of deleting a chosen reminder (memory) from the memories.txt file
+* Altering - The process of changing an already existing reminder into something else based on its index
+
+Notes For Usage:
+* Whenever adding new memories, it is suggested to write them in proactive second person to increase personalization and accountability for yourself
+
+Updates (For Version 1.1.0)
+* Unicode art featured in UI with ANSI colors
+* Additional functions added to improve UX while navigating Mem-Base
