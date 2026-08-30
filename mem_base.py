@@ -165,12 +165,14 @@ if os.path.exists("username.txt"):
 
         @trademark
         def main():
+            print("=================================")
             print("Option 1: Show me all my memories")
             print("Option 2: Add a new memory")
             print("Option 3: Remove a memory")
             print("Option 4: Update a memory")
             print("Option 5: Delete all memories")
             print("Option 6: Exit")
+            print("=================================")
             try:
                 user_choice = int(input("Please choose an option: "))
                 if user_choice == 1:
