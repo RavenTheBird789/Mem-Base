@@ -97,9 +97,17 @@ if os.path.exists("username.txt"):
                 main();                  
 
         def nuke_all():
-            os.remove("memories.txt")
-            os.remove("username.txt") 
-            print(green("All your data has successfully been forgotten."))
+            try:
+                os.remove("memories.txt")
+                os.remove("username.txt") 
+                print(green("All your data has successfully been forgotten."))
+            except FileExistsError:
+                print("No memories found to forget!")
+                time.sleep(2)
+                print("Forgetting name...")
+                os.remove("username.txt")
+                time.sleep(2)
+                print(green("All your data has successfully been forgotten."))
 
         def main_menu():
             user_query = input("Would you like to return to the main menu? (yes/no): ").lower().strip()
