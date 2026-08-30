@@ -102,9 +102,9 @@ if os.path.exists("username.txt"):
                 os.remove("username.txt") 
                 print(green("All your data has successfully been forgotten."))
             except FileNotFoundError:
-                print("No memories found to forget!")
+                print(yellow("[/] No memories found to forget"))
                 time.sleep(2)
-                print("Forgetting name...")
+                print("[-] Forgetting name...")
                 os.remove("username.txt")
                 time.sleep(2)
                 print(green("All your data has successfully been forgotten."))
