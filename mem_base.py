@@ -108,52 +108,62 @@ if os.path.exists("username.txt"):
                 os.remove("username.txt")
                 time.sleep(2)
                 print(green("All your data has successfully been forgotten."))
+        
+        def change_name():
+            prompt = input("Enter your new username: ")
+            if prompt:
+                if os.path.exists("username.txt"):
+                    os.remove("username.txt")
+                hashed_username = hashlib.sha3_512(prompt.encode()).hexdigest()
+                with open("username.txt", "w") as un:
+                            un.write("".join(hashed_username))
+                print(green("Your username has been successfully updated!"))
 
         def main_menu():
             user_query = input("Would you like to return to the main menu? (yes/no): ").lower().strip()
             if user_query == "yes":
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(green("Returning to the main menu"))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(green("Returning to the main menu" + ("." * 1)))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(green("Returning to the main menu" + ("." * 2)))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(green("Returning to the main menu" + ("." * 3)))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 main();
             elif user_query == "no":
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(green("Exiting"))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(green("Exiting" + ("." * 1)))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(green("Exiting" + ("." * 2)))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(green("Exiting" + ("." * 3)))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 os._exit(0);
             else:
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(red("Invalid Input. Returning to the main menu"))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(red("Invalid Input. Returning to the main menu" + ("." * 1)))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(red("Invalid Input. Returning to the main menu" + ("." * 2)))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 print(red("Invalid Input. Returning to the main menu" + ("." * 3)))
-                time.sleep(0.5)
+                time.sleep(0.05)
                 os.system("cls" if os.name == 'nt' else 'clear')
                 main();
  
@@ -166,7 +176,7 @@ if os.path.exists("username.txt"):
                 print("|------------------|")
                 print(("|") + bold(red("By RavenTheBird789")) + ("|"))
                 print("|------------------|")
-                print("|---|  v1.1.0  |---|")
+                print("|---|  v1.2.0  |---|")
                 print("|__________________|\n")
                 main_func()
             return wrapper
@@ -179,7 +189,8 @@ if os.path.exists("username.txt"):
             print("Option 3: Forget a memory")
             print("Option 4: Alter a memory")
             print("Option 5: Forget all memories")
-            print("Option 6: Exit")
+            print("Option 6: Change username")
+            print("Option 7: Exit")
             print("=================================")
             try:
                 user_choice = int(input("Please choose an option: "))
@@ -204,7 +215,7 @@ if os.path.exists("username.txt"):
                     os.system("cls" if os.name == 'nt' else 'clear')
                     change_mem()
                     time.sleep(2)
-                    main_menu()
+                    main_menu();
                 elif user_choice == 5:
                     os.system("cls" if os.name == 'nt' else 'clear')
                     user_prompt = input("Are you sure you want to forget everything? (yes/no): ").strip().lower()
@@ -228,17 +239,22 @@ if os.path.exists("username.txt"):
                         main()
                 elif user_choice == 6:
                     os.system("cls" if os.name == 'nt' else 'clear')
+                    change_name()
+                    time.sleep(2)
+                    main_menu();
+                elif user_choice == 7:
+                    os.system("cls" if os.name == 'nt' else 'clear')
                     print(green("Exiting"))
-                    time.sleep(0.5)
+                    time.sleep(0.05)
                     os.system("cls" if os.name == 'nt' else 'clear')
                     print(green("Exiting" + ("." * 1)))
-                    time.sleep(0.5)
+                    time.sleep(0.05)
                     os.system("cls" if os.name == 'nt' else 'clear')
                     print(green("Exiting" + ("." * 2)))
-                    time.sleep(0.5)
+                    time.sleep(0.05)
                     os.system("cls" if os.name == 'nt' else 'clear')
                     print(green("Exiting" + ("." * 3)))
-                    time.sleep(0.5)
+                    time.sleep(0.05)
                     os.system("cls" if os.name == 'nt' else 'clear')
                     os._exit(0);              
                 else:
