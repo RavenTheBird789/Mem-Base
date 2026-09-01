@@ -20,7 +20,7 @@ Key Terminology:
 Notes For Usage:
 * Whenever adding new memories, it is suggested to write them in proactive second person to increase personalization and accountability for yourself
 
-Updates (For Version 1.1.0)
-* Unicode art featured in UI with ANSI colors
-* Additional functions added to improve UX while navigating Mem-Base
-* FileNotFound error fixed for Option 5 if no prior memories have been saved
+Updates (For Version 1.2.0)
+* Exit animation speed increased
+* Redirection to the main menu animation speed increased
+* Additional option created to conveniently allow users to update their username (Option 6)
