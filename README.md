@@ -29,6 +29,7 @@ Key Terminology:
 
 Notes For Usage:
 * Whenever adding new memories, it is suggested to write them in proactive second person to increase personalization and accountability for yourself
+* Run the "membase" command only while inside the Mem-Base installation directory. This ensures the application can access your saved username and memories
 
 Updates (For Version 1.2.0)
 * Exit animation speed increased
