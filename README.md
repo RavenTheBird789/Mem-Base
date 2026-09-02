@@ -14,14 +14,14 @@ Execution
 
 Global Execution (Optional)
 * Alternatively, you can run the program globally by simply typing "membase" from anywhere in your terminal, follow these steps:
-* Add "#!/usr/bin/env python3" as the very first line in mem_base.py (Do this via "nano mem_base.py")
-* Make the file executable by typing "chmod +x mem_base.py" in your terminal
-* Copy the file to a new name using "cp mem_base.py membase" then make that executable too with "chmod +x membase"
-* Create a local bin folder if you don't already have one using "mkdir -p ~/.local/bin"
-* Move the file into it using "mv membase ~/.local/bin/"
-* Make sure that folder is in your PATH by adding "export PATH="HOME/.local/bin:PATH"" to your ~/.bashrc (or ~/.zshrc if you use zsh)
-* Reload your terminal config using "source ~/.bashrc" (or ~/.zshrc)
-* Type "membase" from anywhere to run the program
+  1. Add "#!/usr/bin/env python3" as the very first line in mem_base.py (Do this via "nano mem_base.py")
+  2. Make the file executable by typing "chmod +x mem_base.py" in your terminal
+  3. Copy the file to a new name using "cp mem_base.py membase" then make that executable too with "chmod +x membase"
+  4. Create a local bin folder if you don't already have one using "mkdir -p ~/.local/bin"
+  5. Move the file into it using "mv membase ~/.local/bin/"
+  6. Make sure that folder is in your PATH by adding "export PATH="HOME/.local/bin:PATH"" to your ~/.bashrc (or ~/.zshrc if you use zsh)
+  7. Reload your terminal config using "source ~/.bashrc" (or ~/.zshrc)
+  8. Type "membase" from anywhere to run the program
 
 Key Terminology:
 * Memories - Reminders for yourself that you write to the "memories.txt" file
