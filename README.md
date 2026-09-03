@@ -13,7 +13,7 @@ Execution
 * To run, simply type "python3 mem_base.py" in your command line within your terminal or a shortcut can be created in a terminal session using the bash alias command to run the program faster. (Ex: alias run="python3 mem_base.py")
 
 Global Execution (Optional)
-* Alternatively, you can run the program globally by simply typing "membase" from anywhere in your terminal, follow these steps:
+* Alternatively, you can run the program globally by simply typing "membase" from anywhere in your terminal, follow these steps (For macOS and Linux):
   1. Make the file executable by typing "chmod +x mem_base.py" in your terminal
   2. Copy the file to a new name using "cp mem_base.py membase" then make that executable too with "chmod +x membase"
   3. Create a local bin folder if you don't already have one using "mkdir -p ~/.local/bin"
@@ -29,7 +29,7 @@ Global Execution (Optional)
   4. In the same folder, create a new text file named "membase.bat"
   5. Open "membase.bat" in Notepad and add this single line "@python "%~dp0membase.py" %*"
   6. Save and close the file
-  7. Add your folder to your PATH: press the Windows key, search "Environment Variables", click "Edit the system environment variables", click "Environment Variables", under "User variables" select "Path", click "Edit", click "New", then paste in your folder path (e.g "C:\Scripts")
+  7. Add your folder to your PATH: press the Windows key, search "Environment Variables", click "Edit the system environment variables", click "Environment Variables", under "User variables" select "Path", click "Edit", click "New", then paste in your folder path (e.g. "C:\Scripts")
   8. Click OK on all the windows to save
   9. Close and reopen Command Prompt or Powershell
   10. Type "membase" from anywhere to run the program
