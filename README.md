@@ -22,6 +22,18 @@ Global Execution (Optional)
   6. Reload your terminal config using "source ~/.bashrc" (or ~/.zshrc)
   7. Type "membase" from anywhere to run the program
 
+* For Windows
+  1. Make sure Python is added to your PATH (check by typing "python --version" in Command Prompt. If it shows a version number, you're set)
+  2. Create a folder to hold your global scripts, such as "C:\Scripts" (You can make this anywhere, just don't forget the path)
+  3. Copy "mem_base.py" into that folder and rename the copy "membase.py"
+  4. In the same folder, create a new text file named "membase.bat"
+  5. Open "membase.bat" in Notepad and add this single line "@python "%~dp0membase.py" %*"
+  6. Save and close the file
+  7. Add your folder to your PATH: press the Windows key, search "Environment Variables", click "Edit the system environment variables", click "Environment Variables", under "User variables" select "Path", click "Edit", click "New", then paste in your folder path (e.g "C:\Scripts")
+  8. Click OK on all the windows to save
+  9. Close and reopen Command Prompt or Powershell
+  10. Type "membase" from anywhere to run the program
+
 Key Terminology:
 * Memories - Reminders for yourself that you write to the "memories.txt" file
 * Forgetting - The process of deleting a chosen reminder (memory) from the memories.txt file
