@@ -231,7 +231,8 @@ if os.path.exists("username.txt"):
                         else:
                             os.system("cls" if os.name == 'nt' else 'clear')
                             print(red("Invalid Input"))
-                            time.sleep(2)
+                            time.sleep(1)
+                            os.system("cls" if os.name == 'nt' else 'clear')
                             main();
                     else:
                         os.system("cls" if os.name == 'nt' else 'clear')
@@ -262,7 +263,8 @@ if os.path.exists("username.txt"):
                     time.sleep(1)
                     os.system("cls" if os.name == 'nt' else 'clear')
                     print(red("Invalid Input"))
-                    time.sleep(2)
+                    time.sleep(1)
+                    os.system("cls" if os.name == 'nt' else 'clear')
                     main();
             except ValueError:
                 time.sleep(1)
